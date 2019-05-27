@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- Strutsの詳細設定 -->
+
+<struts>
+<constant name="struts.devMode" value="true"/>
+<!-- 対象のpackageを設定 -->
+<package name="com.internousdev.ecsite.action" extends="struts-default">
+
+<!-- GoHomeAction -->
+<action name="GoHomeAction" class="com.internousdev.ecsite.action.GoHomeAction" method="execute">
+<result name="success">home.jsp</result>
+</action>
+
+<!-- HomeAction -->
+<action name="HomeAction" class="com.internousdev.ecsite.action.HomeAction" method="execute">
+<result name="success">login.jsp</result>
+</action>
+
+<!-- LoginAction -->
+<action name="LoginAction" class="com.internousdev.ecsite.action.LoginAction" method="execute">
+<result name="success">productList.jsp</result>
+<result name="error">login.jsp</result>
+</action>
+
+<!-- CreateUserAction -->
+<action name="CreateUserAction" class="com.internousdev.ecsite.action.CreateUserAction" method="execute">
+<result name="success">createUser.jsp</result>
+<result name="back">login.jsp</result>
+</action>
+
+<!-- CreateUserConfirmAction -->
+<action name="CreateUserConfirmAction" class="com.internousdev.ecsite.action.CreateUserConfirmAction" method="execute">
+<result name="success">createUserConfirm.jsp</result>
+<result name="error">createUser.jsp</result>
+</action>
+
+<!-- CreateUserCompleteAction -->
+<action name="CreateUserCompleteAction" class="com.internousdev.ecsite.action.CreateUserCompleteAction" method="execute">
+<result name="success">createUserComplete.jsp</result>
+<result name="error">createUser.jsp</result>
+</action>
+
+<!-- BuyItemAction -->
+<!-- <action name="BuyItemAction" class="com.internousdev.ecsite.action.BuyItemAction" method="execute">
+<result name="success">buyItemConfirm.jsp</result>
+<result name="error">buyItem.jsp</result>
+</action> -->
+
+<!-- BuyItemConfirmAction -->
+<!-- <action name="BuyItemConfirmAction" class="com.internousdev.ecsite.action.BuyItemConfirmAction" method="execute">
+<result name="success">buyItemComplete.jsp</result>
+<result name="back">buyItem.jsp</result>
+</action> -->
+
+<!-- BuyItemCompleteAction -->
+<!-- <action name="BuyItemCompleteAction" class="com.internousdev.ecsite.action.BuyItemCompleteAction" method="execute">
+<result name="success">home.jsp</result>
+</action> -->
+
+<!-- MyPageAction -->
+<action name="MyPageAction" class="com.internousdev.ecsite.action.MyPageAction" method="execute">
+<result name="success">myPage.jsp</result>
+<result name="error">error.jsp</result>
+</action>
+
+<!-- LogoutAction -->
+<action name="LogoutAction" class="com.internousdev.ecsite.action.LogoutAction" method="execute">
+<result name="success">home.jsp</result>
+</action>
+
+<!-- AddItemAction -->
+<action name="AddItemAction" class="com.internousdev.ecsite.action.AddItemAction" method="execute">
+<result name="success">addItem.jsp</result>
+<result name="back">home.jsp</result>
+</action>
+
+<!-- AddItemConfirmAction -->
+<action name="AddItemConfirmAction" class="com.internousdev.ecsite.action.AddItemConfirmAction" method="execute">
+<result name="success">addItemConfirm.jsp</result>
+<result name="error">addItem.jsp</result>
+</action>
+
+<!-- AddItemCompleteAction -->
+<action name="AddItemCompleteAction" class="com.internousdev.ecsite.action.AddItemCompleteAction" method="execute">
+<result name="success">addItemComplete.jsp</result>
+<result name="error">addItemError.jsp</result>
+</action>
+
+<!-- AddCartAction -->
+<action name="AddCartAction" class="com.internousdev.ecsite.action.AddCartAction" method="execute">
+<result name="success">cart.jsp</result>
+<result name="error">home.jsp</result>
+<result name="input">cart.jsp</result>
+</action>
+
+<!-- CartAction -->
+<action name="CartAction" class="com.internousdev.ecsite.action.CartAction" method="execute">
+<result name="success">cart.jsp</result>
+<result name="error">home.jsp</result>
+</action>
+
+<!-- DeleteCartAction -->
+<action name="DeleteCartAction" class="com.internousdev.ecsite.action.DeleteCartAction" method="execute">
+<result name="success">cart.jsp</result>
+<result name="error">cart.jsp</result>
+</action>
+
+<!-- CreateDestinationAction -->
+<action name="CreateDestinationAction" class="com.internousdev.ecsite.action.CreateDestinationAction" method="execute">
+<result name="success">createDestination.jsp</result>
+<result name="error">home.jsp</result>
+</action>
+
+<!-- CreateDestinationCompleteAction -->
+<action name="CreateDestinationCompleteAction" class="com.internousdev.ecsite.action.CreateDestinationCompleteAction" method="execute">
+<result name="success">createDestinationComplete.jsp</result>
+<result name="error">createDestination.jsp</result>
+</action>
+
+<!-- CreateDestinationConfirmAction -->
+<action name="CreateDestinationConfirmAction" class="com.internousdev.ecsite.action.CreateDestinationConfirmAction" method="execute">
+<result name="success">createDestinationConfirm.jsp</result>
+<result name="error">createDestination.jsp</result>
+</action>
+
+<!-- DeletePurchaseHistoryAction -->
+<action name="DeletePurchaseHistoryAction" class="com.internousdev.ecsite.action.DeletePurchaseHistoryAction" method="execute">
+<result name="success">createUser.jsp</result>
+<result name="error">home.jsp</result>
+</action>
+
+<!-- ProductDetailsAction -->
+<action name="ProductDetailsAction" class="com.internousdev.ecsite.action.ProductDetailsAction" method="execute">
+<result name="success">productDetails.jsp</result>
+<result name="error">productList.jsp</result>
+</action>
+
+<!-- ProductListAction -->
+<action name="ProductListAction" class="com.internousdev.ecsite.action.ProductListAction" method="execute">
+<result name="success">productList.jsp</result>
+<result name="error">home.jsp</result>
+</action>
+
+<!-- PurchaseHistoryAction -->
+<action name="PurchaseHistoryAction" class="com.internousdev.ecsite.action.PurchaseHistoryAction" method="execute">
+<result name="success">purchaseHistory.jsp</result>
+</action>
+
+<!-- SearchItemAction -->
+<action name="SearchItemAction" class="com.internousdev.ecsite.action.SearchItemAction" method="execute">
+<result name="success">productList.jsp</result>
+<result name="error">productList.jsp</result>
+</action>
+
+<!-- SettlementCompleteAction -->
+ <action name="SettlementCompleteAction" class="com.internousdev.ecsite.action.SettlementCompleteAction" method="execute">
+<result name="success">settlementComplete.jsp</result>
+<result name="error">settlementConfirm.jsp</result>
+</action>
+
+ <!-- SettlementCompleteAction -->
+<action name="SettlementConfirmAction" class="com.internousdev.ecsite.action.SettlementConfirmAction" method="execute">
+<result name="success">settlementConfirm.jsp</result>
+<result name="error">login.jsp</result>
+</action>
+
+<!-- ResetPasswordAction -->
+<action name="ResetPasswordAction" class="com.internousdev.ecsite.action.ResetPasswordAction" method="execute">
+<result name="success">resetPassword.jsp</result>
+<result name="error">login.jsp</result>
+</action>
+
+<!-- ResetPasswordCompleteAction -->
+<action name="ResetPasswordCompleteAction" class="com.internousdev.ecsite.action.ResetPasswordCompleteAction" method="execute">
+<result name="success">resetPasswordComplete.jsp</result>
+<result name="error">resetPassword.jsp</result>
+</action>
+
+<!-- ResetPasswordConfirmAction -->
+<action name="ResetPasswordConfirmAction" class="com.internousdev.ecsite.action.ResetPasswordConfirmAction" method="execute">
+<result name="success">resetPasswordConfirm.jsp</result>
+<result name="error">resetPassword.jsp</result>
+</action>
+
+</package>
+</struts>
